@@ -6,7 +6,9 @@ export const TEAM_CREATE_SUCCESS = 'TEAM_CREATE_SUCCESS'
 export const TEAM_DELETE_SUCCESS = 'TEAM_DELETE_SUCCESS'
 export const TEAM_UPDATE_SUCCESS = 'TEAM_UPDATE_SUCCESS'
 
-const baseUrl = 'http://localhost:4001'
+const port = process.env.PORT || 'http://localhost:4001';
+// const baseUrl = 'http://localhost:4001'
+const baseUrl = port
 
 const teamsFetched = teams => ({
   type: TEAMS_FETCHED,
