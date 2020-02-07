@@ -7,8 +7,7 @@ class TeamDetailsContainer extends React.Component {
   state = {
       editMode: false,
       name: '',
-      date: '',
-      description: ''
+      
   }
 
   onChange = (team) => {
@@ -18,18 +17,17 @@ class TeamDetailsContainer extends React.Component {
   }
 
   onSubmit = (team) => {
-    team.prteamDefault()
+    team.preventDefault()
 
-    const { name, date, description } = this.state
+    const { name, } = this.state
 
     this.props.updateTeam(this.props.team.id, {
-        name, date, description        
+        name,       
     })
 
     this.setState({
         name: '',
-        date: '',
-        description: ''
+        
     })
 
     this.toggleEdit()
@@ -45,15 +43,15 @@ class TeamDetailsContainer extends React.Component {
   }
 
   toggleEdit = () => {
-    const { name, date, description } = this.props.team
-    this.setState({ editMode: !this.state.editMode, name, date, description })
+    const { name, } = this.props.team
+    this.setState({ editMode: !this.state.editMode, name, })
   }
 
   render() {
       const team = this.state.editMode 
         ? { name: this.state.name, 
-            date: this.state.date, 
-            description: this.state.description } : this.props.team
+            
+        } : this.props.team
 
     return <TeamDetails 
         team={team} 

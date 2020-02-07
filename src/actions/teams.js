@@ -82,7 +82,7 @@ export const createTeam = (data) => dispatch => {
 
 export const updateTeam = (id, data) => dispatch => {
   request
-    .patch(`${baseUrl}/teams/${id}`)
+    .put(`${baseUrl}/teams/${id}`)
     .send(data)
     .then(response => {
       dispatch(teamUpdateSuccess(response.body))
