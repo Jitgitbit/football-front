@@ -8,8 +8,6 @@ import {Link} from 'react-router-dom'
 class CreateTeamFormContainer extends React.Component {
   state = {
     name: '',
-    date: '',
-    description: ''
   }
 
   onChange = (team) => {
@@ -22,8 +20,6 @@ class CreateTeamFormContainer extends React.Component {
     team.prteamDefault()
     this.setState({
       name: '',
-      date: '',
-      description: ''
     })
     
     this.props.createTeam(this.state)
