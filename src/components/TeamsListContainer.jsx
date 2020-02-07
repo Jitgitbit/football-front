@@ -13,7 +13,7 @@ class TeamsListContainer extends React.Component {
     return (
       <>
         <TeamsList teams={this.props.teams} />
-        <button><Link to={'teams/new'}>Add an Team!</Link></button>
+        <button><Link to={'teams/new'}>Add a Team!</Link></button>
       </>
     )
   }
