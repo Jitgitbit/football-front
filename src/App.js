@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
-// import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
-// import TeamsListContainer from './components/TeamsListContainer'
+import TeamsListContainer from './components/TeamsListContainer'
 // import CreateTeamFormContainer from './components/CreateTeamFormContainer'
 // import TeamDetailsContainer from './components/TeamDetailsContainer'
 import store from './store'
@@ -15,11 +15,11 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Home/>
-          {/* <Switch>
+          <Switch>
             <Route path="/" exact component={TeamsListContainer} />
-            <Route path="/events/new" exact component={CreateTeamFormContainer} />
-            <Route path="/events/:id" component={TeamDetailsContainer} />
-          </Switch> */}
+            {/* <Route path="/teams/new" exact component={CreateTeamFormContainer} />
+            <Route path="/teams/:id" component={TeamDetailsContainer} /> */}
+          </Switch>
         </div>
       </Provider>
     );
