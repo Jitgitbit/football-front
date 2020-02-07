@@ -35,7 +35,7 @@ const teamUpdateSuccess = team => ({
 
 
 
-export const deleteEvent = (team) => (dispatch) => {
+export const deleteTeam = (team) => (dispatch) => {
   request
     .delete(`${baseUrl}/teams/${team.id}`)
     .then(response => {
@@ -47,7 +47,7 @@ export const deleteEvent = (team) => (dispatch) => {
     })
 }
 
-export const loadEvents = () => (dispatch, getState) => {
+export const loadTeams = () => (dispatch, getState) => {
   // when the state already contains teams, we don't fetch them again
   if (getState().teams.length > 0) return
 
