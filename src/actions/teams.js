@@ -6,7 +6,7 @@ export const TEAM_CREATE_SUCCESS = 'TEAM_CREATE_SUCCESS'
 export const TEAM_DELETE_SUCCESS = 'TEAM_DELETE_SUCCESS'
 export const TEAM_UPDATE_SUCCESS = 'TEAM_UPDATE_SUCCESS'
 
-const port = process.env.PORT || 'http://localhost:4001';
+const port = process.env.PORT || 'https://damp-beach-23036.herokuapp.com';
 // const baseUrl = 'http://localhost:4001'
 const baseUrl = port
 
