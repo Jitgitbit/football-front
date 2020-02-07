@@ -41,7 +41,7 @@ export const deleteTeam = (team) => (dispatch) => {
     .then(response => {
       if(response.ok){
         // passing the original team object because the api 
-        // returns {} instead of the deled record
+        // returns {} instead of the deleted record
         dispatch(teamDeleteSuccess(team))
       }
     })
