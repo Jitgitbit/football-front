@@ -10,14 +10,14 @@ class CreateTeamFormContainer extends React.Component {
     name: '',
   }
 
-  onChange = (team) => {
+  onChange = (event) => {
     this.setState({
-      [team.target.name]: team.target.value
+      [event.target.name]: event.target.value
     })
   }
 
-  onSubmit = (team) => {
-    team.prteamDefault()
+  onSubmit = (event) => {
+    event.preventDefault()
     this.setState({
       name: '',
     })
